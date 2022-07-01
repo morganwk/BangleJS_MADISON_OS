@@ -279,12 +279,13 @@ function showThemeMenu() {
     rgb[/*LANG*/'cyan'] = "#0ff";
     rgb[/*LANG*/'magenta'] = "#f0f";
     rgb[/*LANG*/'yellow'] = "#ff0";
-    if (!BANGLEJS2) {
+    // if (!BANGLEJS2) {    // I cast Allow Dithering!
       // these would cause dithering, which is not great for e.g. text
-      rgb[/*LANG*/'orange'] = "#ff7f00";
-      rgb[/*LANG*/'purple'] = "#7f00ff";
-      rgb[/*LANG*/'grey'] = "#7f7f7f";
-    }
+      rgb[/*LANG*/'orange'] = "#ff8000";
+      rgb[/*LANG*/'vivid'] = "#0080FF"; //my creation... MADISON blue...
+      rgb[/*LANG*/'purple'] = "#8000ff";
+      rgb[/*LANG*/'grey'] = "#808080";
+    // } allow dithering! also replaced "7f" with "80" in all instances within this IF statement.
     let colors = [], names = [];
     for(const c in rgb) {
       names.push(c);

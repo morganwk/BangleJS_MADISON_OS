@@ -5,8 +5,8 @@
 
   let normalizedColorSet = {
     black:g.toColor(0,0,0), white:  g.toColor(1,1,1),
-    red:  g.toColor(1,0,0), yellow: g.toColor(1,1,0),
-    green:g.toColor(0,1,0), magenta:g.toColor(1,0,1),
+    red:  g.toColor(1,0,0), yellow: g.toColor('#FF8000'), //changed from 1,1,0
+    green:g.toColor(0,1,0), magenta:g.toColor('#0080FF'), //changed from 1,0,1
     blue: g.toColor(0,0,1), cyan:   g.toColor(0,1,1)
   };
 
@@ -495,4 +495,3 @@
     activeLayout.render();
   }
   gotoScreen('MainScreen');
-

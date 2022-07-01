@@ -1,7 +1,60 @@
-.navbar { background-color: #5755d9; padding: 1em 1em 1em 1em; }
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+/* I've tried a bunch of different syntaxes in case it's a formatting problem
+the next two have different formats but neither work, nor does the google font
+
+can't fucking figure it out */
+
+@font-face {
+  font-family: 'Euro';
+  src: url(euro.woff2);
+}
+
+@font-face {
+  font-family: 'Typo';
+  src: url(typo.woff2);
+}
+
+
+:root {
+  --madisonFG: #0080FF;
+  --madisonBG: #000;
+
+  --font1: 'Euro', cursive;
+  --font2: 'Typo', cursive;
+  --font3: 'Source Sans Pro', cursive;
+}
+
+body {
+  font-family: var(--font3);
+  background-color: var(--madisonBG);
+}
+
+.btn {
+  background: var(--madisonBG);
+  border-radius: 5rem;
+  border-color: var(--madisonFG);
+  padding-left:  12px;
+  padding-right: 12px;
+}
+
+.btn:hover {
+  background: var(--madisonFG);
+  color: var(--madisonBG);
+  border-color: var(--madisonFG);
+}
+
+.navbar {
+  background-color: var(--madisonBG);
+  padding: 1em 1em 1em 1em;
+  border-bottom: 1px solid var(--madisonFG);
+}
+
 .navbar .navbar-brand {
-  color: #fff;
+  color: var(--madisonFG);
+  font-family: var(--font1);
+  text-transform: uppercase;
   font-weight: bold;
+  font-size: 28px;
 }
 
 .container.apploader-tab, ul.tab.tab-block {
@@ -30,7 +83,7 @@
 }
 
 a.mr-2{
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -63,7 +116,16 @@ a.btn.btn-link.dropdown-toggle {
 }
 .chip {
   cursor: pointer;
+  border: 1px solid var(--madisonFG);
+  background: var(--madisonBG);
+  color: var(--madisonFG);
+  padding: 12px;
 }
+
+.chip.active {
+  color: var(--madisonBG);
+}
+
 .filter-nav {
   display: inline-block;
 }
@@ -113,4 +175,18 @@ a.btn.btn-link.dropdown-toggle {
   position: absolute; left: 50%; top: 70%;
   transform: translate(-50%,-50%);
   content: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg fill='rgb(87, 85, 217)' xmlns='http://www.w3.org/2000/svg' viewBox='2 2 28 28' width='1.5em' height='1.5em'%3E%3Cpath d='M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 8 L 22 4 L 20 4 L 20 10 C 20 10.552 19.552 11 19 11 L 10 11 C 9.448 11 9 10.552 9 10 L 9 4 L 6 4 z M 16 4 L 16 9 L 18 9 L 18 4 L 16 4 z M 10 16 L 20 16 C 21.105 16 22 16.895 22 18 L 22 24 L 8 24 L 8 18 C 8 16.895 8.895 16 10 16 z'/%3E%3C/svg%3E");
+}
+
+
+.badge:not([data-badge])::after, .badge[data-badge]::after {
+  color: var(--madisonBG);
+  box-shadow: none;
+}
+
+.tab.tab-block .tab-item {
+  border-bottom: none;
+}
+
+.tab .tab-item a {
+  border-bottom-width: 1px;
 }

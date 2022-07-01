@@ -11,9 +11,9 @@ if (window.location.host=="banglejs.com") {
   document.getElementById("apploaderlinks").innerHTML =
     'This is your local Bangle.js App Loader - you can try the <a href="https://banglejs.com/apps/">Official Version</a> here.';
 } else {
-  document.title += " [Unofficial]";
+  document.title += "";
   document.getElementById("apploaderlinks").innerHTML =
-    'This is not the official Bangle.js App Loader - you can try the <a href="https://banglejs.com/apps/">Official Version</a> here.';
+    'This is not the official Bangle.js App Loader - the [Unofficial] tag has been removed from the title because it says MADISON now - you can try the <a href="https://banglejs.com/apps/">Official Version</a> here.';
 }
 
 var RECOMMENDED_VERSION = "2v14";

@@ -1,0 +1,14 @@
+{ "id": "12grid",
+  "name": "12 Grid Demo",
+  "shortName":"12Grid",
+  "version":"0.01",
+  "description": "Just looking at how big the grid looks.",
+  "icon": "app.png",
+  "tags": "",
+  "supports" : ["BANGLEJS2"],
+  "readme": "README.md",
+  "storage": [
+    {"name":"7chname.app.js","url":"app.js"},
+    {"name":"7chname.img","url":"app-icon.js","evaluate":true}
+  ]
+}
